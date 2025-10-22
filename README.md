@@ -1,9 +1,11 @@
 [Riemann Musings with Diagrams](https://xorbkpt.github.io/Riemann-Hypothesis/)
 
-[Riemann Musings Primal Manifold Definition](https://xorbkpt.github.io/Riemann-Hypothesis/riemann1/)
+[Primal Manifold Definition](https://xorbkpt.github.io/Riemann-Hypothesis/primal_manifold/)
 
-[Riemann Musings with References](https://xorbkpt.github.io/Riemann-Hypothesis/riemann2/)
+[Riemann References](https://xorbkpt.github.io/Riemann-Hypothesis/riemann2/)
 
-[Riemann Musings with Links](https://xorbkpt.github.io/Riemann-Hypothesis/riemann3/)
+[Riemann Links](https://xorbkpt.github.io/Riemann-Hypothesis/riemann3/)
+
+
 
 
