@@ -1,1 +1,1 @@
-   - Link: [Riemann Musings](https://xorbkpt.github.io/Riemann-Hypothesis/)
+[Riemann Musings](https://xorbkpt.github.io/Riemann-Hypothesis/)
