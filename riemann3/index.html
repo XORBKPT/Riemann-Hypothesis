@@ -1,1 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Novel Dynamical Approach to the Riemann Hypothesis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax Configuration and Script -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <style>
+        :root {
+            --tum-blue-light: #30A3E6;
+            --tum-blue-dark: #072140;
+            --tum-bg-light: #F8F9FA;
+            --tum-text-primary: #000000;
+            --tum-text-secondary: #555555;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--tum-bg-light);
+            color: var(--tum-text-primary);
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        .tum-header {
+            background-color: var(--tum-blue-dark);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .tum-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .tum-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+        .tum-logo span {
+            color: var(--tum-blue-light);
+        }
+        h1, h2, h3 {
+            color: var(--tum-blue-dark);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+            border-bottom: 2px solid var(--tum-blue-light);
+            padding-bottom: 0.25rem;
+        }
+        .prose {
+            max-width: 80ch;
+            margin: 0 auto;
+        }
+        .prose p, .prose li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--tum-text-secondary);
+        }
+        .prose a {
+            color: var(--tum-blue-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .prose a:hover {
+            color: var(--tum-blue-dark);
+        }
+        .formula-box {
+            background-color: #ffffff;
+            border-left: 4px solid var(--tum-blue-light);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow-x: auto;
+        }
+        .formula-box .step {
+            font-weight: 700;
+            color: var(--tum-blue-dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .abstract {
+            background-color: #eaf6ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid var(--tum-blue-light);
+        }
+        .abstract p {
+            font-style: italic;
+            color: var(--tum-blue-dark);
+        }
+        .comparison-table {
+            width: 100%;
+            margin-top: 2rem;
+            border-collapse: collapse;
+        }
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .comparison-table th {
+            background-color: var(--tum-blue-dark);
+            color: white;
+            font-weight: 700;
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .comparison-table td:first-child {
+            font-weight: bold;
+            color: var(--tum-blue-dark);
+        }
+        .figure {
+            margin: 2rem auto;
+            text-align: center;
+        }
+        .figure svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .figure figcaption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--tum-text-secondary);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <header class="tum-header rounded-lg shadow-md mb-8">
+        <div class="TUM-logo">93E3 BEBC C164 D766<span></span></div>
+    </header>
 
+
+    <main class="prose">
+        <h1 class="text-4xl">The Riemann Hypothesis as a Stability Criterion of a Non-Local Operator on a Primal Manifold: A Novel Approach</h1>
+        <p class="text-lg">Summer Lectures 2025</p>
+
+
+        <div class="abstract">
+            <h2 class="!mt-0 !border-none">Abstract</h2>
+            <p>This is a summary of conversations in the summer of 2025 on a novel theoretical framework for the Riemann Hypothesis (RH), which conjectured the RH as a fundamental stability criterion for a dynamical system; the existence of a "Primal Manifold," a geometric object whose topology is dictated by the prime numbers. On this manifold acts a non-local, self-adjoint operator—a "Topological Laplacian"—whose spectrum corresponds to the imaginary parts of the non-trivial zeros of the Riemann zeta function. The RH as equivalent to the statement that all finite-energy eigenstates (stable resonances) of this operator must lie on a central axis of symmetry, the geometric analogue of the critical line. This equilibrium arises from a cancellation between a prime-driven "amplification" force and a symmetry-derived "decay" force. This approach recasts the RH as a problem in quantum chaos, fractal geometry, and topological dynamics, suggesting a potential physical origin for the distribution of primes and zeros. Some of us love complex numbers and their extraordinary history of discovery starting with Cardano who was not looking for them per se but without which hundreds of years later communications and energy as we know it would not be possible. Others just love number theory and cryptography. The graffiti below is a summary of the chats between friends.</p>
+        </div>
+
+
+        <h2>I. Reframing the Hypothesis</h2>
+        <p>The Riemann Hypothesis (RH) asserts that all non-trivial zeros of the Riemann zeta function $\zeta(s)$ have a real part of $1/2$ Modern approaches to solve it generally fall into three categories:</p>
+        <ol>
+            <li><strong>Analytic Number Theory:</strong> $\zeta(s)$ function <a href="https://www.claymath.org/wp-content/uploads/2023/04/Wilkins-translation.pdf" target="_blank">Riemann's 1859 manuscript</a> see <a href="https://www.claymath.org/wp-content/uploads/2022/05/riemann.pdf" target="_blank">J. Brian Conrey's summary</a>.</li>
+            <li><strong>Random Matrix Theory:</strong> Statistical flows between the zeros and the eigenvalues of large random matrices; Hugh Montgomery and Freeman Dyson <a href="https://arxiv.org/abs/math/9905141" target="_blank">"Zeros of zeta functions and symmetry" by Katz and Sarnak</a>.</li>
+            <li><strong>Quantum Chaos & Spectral Theory:</strong> The Hilbert-Pólya conjecture, a self-adjoint operator whose eigenvalues correspond to the zeros. The linking to physics <a href="https://michaelberryphysics.files.wordpress.com/2013/07/berry303.pdf" target="_blank">"The Riemann Zeros and Eigenvalue Asymptotics" by Berry and Keating</a>.</li>
+        </ol>
+        <p>Synthesizing elements of the third with fractal geometry and non-local dynamics. The Hilbert-Pólya operator now as the generator of dynamics on a physical, arithmetically-defined space. This new fourth approach means RH becomes a statement of stability.</p>
+
+
+        <h2>II. Constructing the Framework</h2>
+        <p>We sketeched out five arguments that define the Primal Manifold $\mathcal{P}$ the non-local operator $H$ and the stability mechanism enforcing the RH.</p>
+
+
+        <div class="formula-box">
+            <div class="step">Argument 1: The Primal Manifold as an Adele Quotient Space</div>
+            <p>To capture this "all primes at once," we defined the manifold $\mathcal{P}$ using the ring of adeles $\mathbb{A}_{\mathbb{Q}}$ We propose that $\mathcal{P}$ is a quotient space of the ideles (invertible adeles), which naturally encodes the multiplicative structure of the primes and possesses a self-similar, fractal topology.</p>
+            $$ \mathcal{P} \subset \mathbb{A}_{\mathbb{Q}}^{\times} / \mathbb{Q}^{\times} $$
+            <p><em>Correlation:</em> Inspired by the work of Tate, Iwasawa algebraic number theory <a href="https://math.mit.edu/~poonen/786/notes.pdf"_blank">Tate's thesis</a> ("Fourier Analysis in Number Fields and Hecke's Zeta-Functions"), which uses adelic integration to prove the functional equation for general L-functions we look at this algebraic space as a novel geometric 'phase space' for a dynamical system.</p>
+        </div>
+        
+        <div class="figure">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgb(220,240,255);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(7,33,64);stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <rect width="400" height="200" fill="var(--tum-blue-dark)" rx="8"/>
+                <circle cx="200" cy="100" r="80" fill="url(#grad1)" />
+                <text x="200" y="105" font-family="Inter, sans-serif" font-size="12" fill="white" text-anchor="middle">Primal Manifold P</text>
+                <text x="200" y="190" font-family="Inter, sans-serif" font-size="10" fill="#aaa" text-anchor="middle">A space where each point reflects all p-adic and real properties</text>
+            </svg>
+            <figcaption>Fig 1. The Primal Manifold P as a unified space incorporating all prime "topological defects".</figcaption>
+        </div>
+
+
+        <div class="formula-box">
+            <div class="step">Argument 2: The Non-Local Operator as an Integral Transform</div>
+            <p>The operator $H$ cannot be a local differential operator like the standard Laplacian $\nabla^2$ because the value of $\zeta(s)$ depends on all primes globally. We formalised this by defining $H$ as a non-local integral operator, where the state at point $x$ is influenced by the state at all other points $y$ weighted by an arithmetic kernel $K(x, y)$</p>
+            $$ (H\psi)(x) = \int_{\mathcal{P}} K(x, y) \psi(y) d\mu(y) $$
+            <p><em>Correlation:</em> This is like non-local operators found in fractional quantum mechanics, as in Laskin's <a href="https://arxiv.org/abs/1005.4554" target="_blank">"Fractional Quantum Mechanics"</a>. Integral operators are fundamental to functional analysis (Fredholm and Hilbert). The challenge is defining the kernel $K(x,y)$ to match the arithmetic of the zeta function.</p>
+        </div>
+
+
+        <div class="formula-box">
+            <div class="step">Argument 3: Functional Equation as Geometric Symmetry</div>
+            <p>The functional equation $\xi(s) = \xi(1-s)$ must correspond to a fundamental symmetry of the system. We thought of an involution map $\mathcal{I}: \mathcal{P} \to \mathcal{P}$ like $s \mapsto 1-s$ For $H$ to be self-adjoint (required for real eigenvalues), its kernel must be invariant under this symmetry.</p>
+            $$ K(x, y) = K(\mathcal{I}x, \mathcal{I}y) $$
+            <p><em>Correlation:</em> Linking symmetries to conserved quantities is core to both physics (Noether's Theorem) and mathematics: Alain Connes' work on the "spectral realization" of the Riemann zeros (<a href="https://arxiv.org/abs/math/9811068" target="_blank">"Trace formula in noncommutative geometry and the zeros of the Riemann zeta function"</a>) constructs a space where the functional equation is a duality whereas this is a direct geometric-dynamical mechanism.</p>
+        </div>
+        
+        <div class="figure">
+             <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 50 150 C 150 50, 250 50, 350 150" stroke="var(--tum-blue-light)" stroke-width="2" fill="none" stroke-dasharray="5,5" />
+                <path d="M 50 50 C 150 150, 250 150, 350 50" stroke="var(--tum-blue-light)" stroke-width="2" fill="none" />
+                <line x1="200" y1="20" x2="200" y2="180" stroke="var(--tum-blue-dark)" stroke-width="1.5" />
+                <text x="200" y="15" fill="var(--tum-blue-dark)" font-size="10" text-anchor="middle">Critical Line of Symmetry</text>
+                <circle cx="100" cy="92" r="4" fill="red"/>
+                <text x="90" y="85" font-size="12">s</text>
+                <circle cx="300" cy="108" r="4" fill="blue"/>
+                <text x="310" y="115" font-size="12">1-s</text>
+                 <text x="200" y="195" font-size="10" fill="#aaa" text-anchor="middle">Involution I maps states symmetrically across the critical axis.</text>
+            </svg>
+            <figcaption>Fig 2. The symmetry map I on the manifold P mirrors the $s \mapsto 1-s$ symmetry of the zeta function.</figcaption>
+        </div>
+
+
+
+
+        <div class="formula-box">
+            <div class="step">Argument 4: The Prime-Driven Amplification Force</div>
+            <p>We decompose $H = H_{\text{amp}} - H_{\text{decay}}$. The amplification component $H_{\text{amp}}$ embodies the multiplicative structure of the primes from the Euler product. An "arithmetic force" that consistently drives the amplitude of a wavefunction $\psi$ outwards, away from equilibrium.</p>
+            $$ (H_{\text{amp}}\psi)(x) \sim \sum_{p \in \text{Primes}} \log(p) \cdot \mathcal{T}_p \psi(x) $$
+            <p>Here, $\mathcal{T}_p$ is a scaling/translation operator on $\mathcal{P}$ associated with prime $p$</p>
+            <p><em>Correlation:</em> Transfer operators in dynamical systems; Ruelle's review <a href="https://arxiv.org/abs/math/0205218" target="_blank">"Dynamical Zeta Functions and Transfer Operators"</a>. The sum over primes weighted by $\log(p)$ is a like a fragrance of explicit formulas in analytic number theory.</p>
+        </div>
+
+
+        <div class="formula-box">
+            <div class="step">Argument 5: The Symmetry-Enforced Decay & Equilibrium</div>
+            <p>The decay component $H_{\text{decay}}$ acts as the restoring force derived from the global topology and the symmetry $\mathcal{I}$ A stable, finite-energy eigenstate (a zero) can only exist where these two competing forces are in perfect equilibrium: $H_{\text{amp}}\psi = H_{\text{decay}}\psi$ We felt this balance is only achievable for wavefunctions supported on the fixed point set of the symmetry $\mathcal{I}$ the geometric critical line.</p>
+            <p>An eigenstate off the critical line would have its growth and decay factors unbalanced, causing it to either diverge or collapse: $\int |\psi|^2 d\mu \to \infty$ or $\int |\psi|^2 d\mu \to 0$ Neither is a valid physical state.</p>
+            <p><em>Correlation:</em> The novel bit: The RH as a problem of finding ground states in a potential; a common problem in quantum mechanics / QFT. This stability criteria defining fundamental properties of a system is everyhere in physics; stellar evolution, thermodynamics, electricity and magnetism and even cancellations between bosonic and fermionic degrees of freedom for stable vacuum states.</p>
+        </div>
+        
+        <h2>III. Comparative Analysis</h2>
+        <p>This "Dynamical Stability" approach offers new perspectives by providing a <em>causal mechanism</em> for the RH, rather than only describing its properties:</p>
+
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Analytic Number Theory</th>
+                    <th>Random Matrix Theory (RMT)</th>
+                    <th>Quantum Chaos (Hilbert-Pólya)</th>
+                    <th>Dynamical Stability (This Proposal)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Core Object</strong></td>
+                    <td>The $\zeta(s)$ function as an analytic object.</td>
+                    <td>Statistical distribution of eigenvalues in matrix ensembles (GUE).</td>
+                    <td>A hypothetical quantum system with a Hamiltonian.</td>
+                    <td>A geometric "Primal Manifold" $\mathcal{P}$ with a non-local operator $H$.</td>
+                </tr>
+                <tr>
+                    <td><strong>Explanation for RH</strong></td>
+                    <td>A yet-to-be-proven property of the function's analytic continuation.</td>
+                    <td>A statistical coincidence; explains "why the zeros look like that" but not why they are what they are.</td>
+                    <td>A consequence of the operator being self-adjoint (Hermitian).</td>
+                    <td>A stability criterion; zeros can <strong>only</strong> exist on the critical line as stable, finite-energy resonances.</td>
+                </tr>
+                <tr>
+                    <td><strong>Role of Primes</strong></td>
+                    <td>Generators of the Euler product representation of $\zeta(s)$.</td>
+                    <td>Not directly incorporated; the connection is purely statistical.</td>
+                    <td>Implicitly define the potential of the quantum system.</td>
+                    <td>Topological defects of the manifold; they generate the "amplification force" in the operator.</td>
+                </tr>
+                <tr>
+                    <td><strong>Key Challenge</strong></td>
+                    <td>Finding the analytical tool to constrain the zeros' location.</td>
+                    <td>Moving from statistical correlation to a direct proof.</td>
+                    <td>Finding the explicit quantum system and its operator.</td>
+                    <td>Rigorously constructing $\mathcal{P}$ and defining the kernel $K(x,y)$ of the operator $H$.</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h2>IV. Conclusion:</h2>
+        <p>The equilibrium between prime-driven amplification and symmetry-enforced decay—offers provides a potential physical cause for the RH which is novel. It allows us to see the RH in a new light; that the zeros do not lie on the critical line by accident, but because it is the only locus in the universe of numbers where a stable, resonant harmony can exist. The challenge now is to not chase the zeros further down the line, but instead construct the mathematical lattice to rigorously describe the object on which they reside.</p>
+        
+    </main>
+</body>
+</html>
