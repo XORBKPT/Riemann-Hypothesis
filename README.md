@@ -1,6 +1,8 @@
 ---
 
-### The Role of Primes as "Topological Defects" which define the manifold's structure, work so far:
+### Primes as "Topological Defects" which define a manifold's structure.
+
+work so far:
 
 [Riemann Musings with Diagrams](https://xorbkpt.github.io/Riemann-Hypothesis/)
 
