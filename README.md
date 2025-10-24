@@ -10,13 +10,14 @@ work so far:
 
 [2.Hilbert Space](https://xorbkpt.github.io/Riemann-Hypothesis/hilbert_space/) 
 
-to be continued.....<80)
+[3.Construct the Kernel](https://xorbkpt.github.io/Riemann-Hypothesis/Primal_Manifold_and_Hilbert_Space/)
 
 
 
 
 
 
+work in progress.....<80)
 
 [Riemann References](https://xorbkpt.github.io/Riemann-Hypothesis/riemann2/)
 
