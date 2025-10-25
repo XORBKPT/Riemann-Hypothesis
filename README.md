@@ -1,9 +1,10 @@
 ---
 
-#### Primes as "Topological Defects" which define a manifold's structure.
+## Primes as "Topological Defects" which define a manifold's structure.
 
 ### Stepping back from chasing the zeros further down the line...
-## ...asking why they are there in the first place <80)
+
+#### ...asking why they are there in the first place <80)
 
 So far:
 
@@ -22,7 +23,7 @@ So far:
 
 
 
-work in progress.....<80)
+work in progress..
 
 [Riemann References](https://xorbkpt.github.io/Riemann-Hypothesis/riemann2/)
 
