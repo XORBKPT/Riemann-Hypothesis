@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Decomposition of \(L^2(\mathcal{P})\) via Pontryagin Duality</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1.5em;
+      color: #1a1a1a;
+      background-color: #fafafa;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+      margin-top: 1.5em;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.8em;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5em;
+    }
+    h2 {
+      font-size: 1.4em;
+      border-left: 5px solid #3498db;
+      padding-left: 0.8em;
+    }
+    .theorem, .proof {
+      margin: 1.5em 0;
+      padding: 1.2em;
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      border-radius: 4px;
+    }
+    .theorem h3 {
+      margin-top: 0;
+      font-style: italic;
+      color: #2c3e50;
+    }
+    .proof {
+      background-color: #eef5fb;
+      border-left-color: #2980b9;
+    }
+    .proof h3 {
+      color: #2980b9;
+    }
+    p {
+      text-align: justify;
+    }
+    ul {
+      padding-left: 1.5em;
+    }
+    li {
+      margin: 0.5em 0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+
+
+  <h1>Decomposition of \(L^2(\mathcal{P})\) via Pontryagin Duality</h1>
+
+
+  <p>Let \(\mathcal{P}\) be the <strong>primal manifold</strong>, defined as the compact abelian topological group</p>
+  \[
+  \mathcal{P} := \ker(|\cdot| : C_{\mathbb{Q}} \to \mathbb{R}_{>0}),
+  \]
+  <p>where \(C_{\mathbb{Q}} = \mathbb{A}_{\mathbb{Q}}^\times / \mathbb{Q}^\times\) is the idele class group over \(\mathbb{Q}\), and \(|\cdot|\) is the idele norm. As established, \(\mathcal{P} \cong \hat{\mathbb{Z}}^\times = \prod_p \mathbb{Z}_p^\times\), where the product runs over all primes \(p\), and \(\mathbb{Z}_p^\times\) denotes the group of units in the \(p\)-adic integers.</p>
+
+
+  <p>Let \(\mu\) be the <strong>normalized Haar measure</strong> on \(\mathcal{P}\), so that \(\mu(\mathcal{P}) = 1\). The Hilbert space \(L^2(\mathcal{P})\) consists of all measurable functions \(f : \mathcal{P} \to \mathbb{C}\) such that</p>
+  \[
+  \|f\|_2^2 = \int_{\mathcal{P}} |f(x)|^2 \, d\mu(x) < \infty,
+  \]
+  <p>equipped with the inner product</p>
+  \[
+  \langle f, g \rangle = \int_{\mathcal{P}} f(x) \overline{g(x)} \, d\mu(x).
+  \]
+
+
+  <p>The <strong>Pontryagin dual</strong> of \(\mathcal{P}\), denoted \(\widehat{\mathcal{P}}\), is the discrete abelian group of all continuous homomorphisms \(\omega : \mathcal{P} \to S^1\), where \(S^1 = \{ z \in \mathbb{C} : |z| = 1 \}\) is the circle group. These \(\omega\) are precisely the <strong>unitary characters</strong> of \(\mathcal{P}\).</p>
+
+
+  <div class="theorem">
+    <h3>Theorem: Orthonormal Basis Decomposition of \(L^2(\mathcal{P})\)</h3>
+    <p>The set \(\{ \omega : \omega \in \widehat{\mathcal{P}} \}\) forms an <strong>orthonormal basis</strong> for \(L^2(\mathcal{P})\). For any \(f \in L^2(\mathcal{P})\),</p>
+    \[
+    f = \sum_{\omega \in \widehat{\mathcal{P}}} \hat{f}(\omega) \, \omega,
+    \]
+    <p>where the Fourier coefficients are</p>
+    \[
+    \hat{f}(\omega) = \langle f, \omega \rangle = \int_{\mathcal{P}} f(x) \overline{\omega(x)} \, d\mu(x),
+    \]
+    <p>and the series converges in the \(L^2\)-norm. Moreover, <strong>Parseval's identity</strong> holds:</p>
+    \[
+    \|f\|_2^2 = \sum_{\omega \in \widehat{\mathcal{P}}} |\hat{f}(\omega)|^2.
+    \]
+  </div>
+
+
+  <div class="proof">
+    <h3>Proof</h3>
+    <p>Since \(\mathcal{P}\) is a compact abelian topological group, the result follows from the <strong>Peter-Weyl theorem</strong> applied to abelian groups (or directly from Pontryagin duality and Fourier analysis on locally compact abelian groups).</p>
+
+
+    <ol>
+      <li>
+        <p><strong>Orthogonality of Characters</strong>: For distinct \(\omega_1, \omega_2 \in \widehat{\mathcal{P}}\),</p>
+        \[
+        \langle \omega_1, \omega_2 \rangle = \int_{\mathcal{P}} \omega_1(x) \overline{\omega_2(x)} \, d\mu(x) = \int_{\mathcal{P}} (\omega_1 \omega_2^{-1})(x) \, d\mu(x).
+        \]
+        <p>Since \(\omega_1 \omega_2^{-1} \neq 1\) (the trivial character) and is continuous, the integral vanishes by the uniqueness of the Haar measure and the fact that non-trivial characters have mean zero over compact groups. If \(\omega_1 = \omega_2\), then \(\omega_1 \omega_2^{-1} = 1\), and the integral equals \(\mu(\mathcal{P}) = 1\).</p>
+      </li>
+
+
+      <li>
+        <p><strong>Density and Completeness</strong>: The linear span of \(\{ \omega : \omega \in \widehat{\mathcal{P}} \}\) is dense in the space of continuous functions on \(\mathcal{P}\) (by the <strong>Stone-Weierstrass theorem</strong>, as the characters separate points and form an algebra). Since continuous functions are dense in \(L^2(\mathcal{P})\) (as \(\mathcal{P}\) is compact), and the characters are orthonormal, they form a <strong>complete orthonormal basis</strong> by the Hilbert space theory of orthonormal sets.</p>
+      </li>
+
+
+      <li>
+        <p><strong>Fourier Expansion and Parseval</strong>: For any \(f \in L^2(\mathcal{P})\), the partial sums of the series \(\sum \hat{f}(\omega) \omega\) converge to \(f\) in \(L^2\)-norm, and Parseval follows from the completeness of the orthonormal basis.</p>
+      </li>
+    </ol>
+  </div>
+
+
+  <h2>Connection to Hecke Grössencharaktere and the Zeta Function</h2>
+
+
+  <p>The characters \(\omega \in \widehat{\mathcal{P}}\) are precisely the "<strong>arithmetic</strong>" or "<strong>unitary</strong>" components of the <strong>Hecke Grössencharaktere</strong> (grossencharacters) on \(C_{\mathbb{Q}}\). Specifically, since \(C_{\mathbb{Q}} \cong \mathbb{R}_{>0} \times \mathcal{P}\), every continuous homomorphism \(\chi : C_{\mathbb{Q}} \to \mathbb{C}^\times\) (a Hecke character) decomposes as</p>
+  \[
+  \chi(j) = \omega(j) \cdot |j|^s,
+  \]
+  <p>where \(s \in \mathbb{C}\), \(|j|^s\) is the continuous character on the \(\mathbb{R}_{>0}\) factor (extended trivially to \(\mathcal{P}\)), and \(\omega \in \widehat{\mathcal{P}}\) is the restriction of \(\chi\) to \(\mathcal{P}\) (trivial on \(\mathbb{R}_{>0}\)).</p>
+
+
+  <p>This decomposition bridges to the <strong>Riemann zeta function</strong> \(\zeta(s)\) and its generalizations via <strong>Tate's thesis</strong>. The zeta function arises as a Mellin transform or integral over the idele class group:</p>
+  \[
+  \zeta(s) = \int_{C_{\mathbb{Q}}} |j|^{s-1} \, d^\times j,
+  \]
+  <p>(up to normalization and local factors), where the principal (trivial) Hecke character corresponds to \(\omega = 1\). More generally, for a Hecke character \(\chi = \omega \cdot |\cdot|^s\), the associated <strong>L-function</strong> is</p>
+  \[
+  L(s, \chi) = \sum_{n=1}^\infty \frac{\chi(n)}{n^s} = \prod_p (1 - \chi(p) p^{-s})^{-1},
+  \]
+  <p>(analytically continued), encoding arithmetic information through \(\omega\).</p>
+
+
+  <p>The decomposition of \(L^2(\mathcal{P})\) via \(\{ \omega \}\) thus provides the <strong>spectral foundation</strong> for harmonic analysis on \(\mathcal{P}\), linking the "<strong>arithmetic spectrum</strong>" (characters \(\omega\)) to the analytic properties of \(\zeta(s)\) and L-functions, including the functional equation and the distribution of zeros. This step formalizes the transition from the group-theoretic structure of \(\mathcal{P}\) to the analytic continuation and pole residues in the zeta function, as the <strong>Fourier transform on \(\mathcal{P}\)</strong> (via Pontryagin duality) mirrors the decomposition of automorphic forms or theta functions in the adelic setting.</p>
+
+
+  <div class="footer">
+    <p>For discussion over coffee (DE) and tea (UK)October 2025</p>
+    <p>93E3 BEBC C164 D766</p>
+  </div>
+
+
+</body>
+</html>
