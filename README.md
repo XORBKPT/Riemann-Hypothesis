@@ -27,13 +27,13 @@
 
   [10.Count from Trace](https://xorbkpt.github.io/Riemann-Hypothesis/Riemann_Prime_Counting_Formula_from_Trace/)
 
-#
+##
   
-[11.Formalise Dynamics](https://xorbkpt.github.io/Riemann-Hypothesis/Conjectural_Proof_of_Riemann_Hypothesis_via_Dynamical_Stability_and_RG_Flow/)
+[11.Conjectural Proof of RH via Dynamical Stability and RG Flow](https://xorbkpt.github.io/Riemann-Hypothesis/Conjectural_Proof_of_Riemann_Hypothesis_via_Dynamical_Stability_and_RG_Flow/)
 
 [12.Summary](https://xorbkpt.github.io/Riemann-Hypothesis/Summary_Conjectural_Proofs_and_Insights)
 
-  [Future Work](https://xorbkpt.github.io/Riemann-Hypothesis/Connection_Between_Riemann_Hypothesis_and_QFT)
+[Future Work](https://xorbkpt.github.io/Riemann-Hypothesis/Connection_Between_Riemann_Hypothesis_and_QFT)
 
 
 work in progress..
