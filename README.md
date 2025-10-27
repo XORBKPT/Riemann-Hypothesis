@@ -4,7 +4,7 @@
 
 ### Stepping back from chasing the zeros further down the line...
 
-#### ...asking why they are there in the first place <80)
+### ...asking why they are there in the first place <80)
 
 So far:
 
@@ -19,8 +19,11 @@ So far:
 [4.Proof Step_1](https://xorbkpt.github.io/Riemann-Hypothesis/Proof_1/)
 
 
+  [4.Proof Step_1](https://xorbkpt.github.io/Riemann-Hypothesis/Proof_1/)
 
+  [4.Proof Step_1](https://xorbkpt.github.io/Riemann-Hypothesis/Proof_1/)
 
+  [4.Proof Step_1](https://xorbkpt.github.io/Riemann-Hypothesis/Proof_1/)
 
 
 work in progress..
