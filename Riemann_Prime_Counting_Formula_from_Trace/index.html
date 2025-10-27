@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Derivation Example: Riemann's Prime Counting Formula from the Trace</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1.5em;
+      color: #1a1a1a;
+      background-color: #fafafa;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+      margin-top: 1.5em;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.8em;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5em;
+    }
+    h2 {
+      font-size: 1.4em;
+      border-left: 5px solid #3498db;
+      padding-left: 0.8em;
+    }
+    .theorem, .proof {
+      margin: 1.5em 0;
+      padding: 1.2em;
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      border-radius: 4px;
+    }
+    .theorem h3 {
+      margin-top: 0;
+      font-style: italic;
+      color: #2c3e50;
+    }
+    .proof {
+      background-color: #eef5fb;
+      border-left-color: #2980b9;
+    }
+    .proof h3 {
+      color: #2980b9;
+    }
+    p {
+      text-align: justify;
+    }
+    ul {
+      padding-left: 1.5em;
+    }
+    li {
+      margin: 0.5em 0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <h1>Explicit Derivation Example: Riemann's Prime Counting Formula from the Trace Formula</h1>
+  <p>To illustrate the derivation of the explicit formula from the trace formula, we provide a concrete example using a <strong>sharp cutoff test function</strong>, which recovers Riemann's original formula for the prime counting function \(\pi(x) = \sum_{p \leq x} 1\). This test function is not smooth (as required for strict convergence in Weil's formula), but it serves as a distributional limit and demonstrates the process. The example bridges the dynamical trace formula to classical analytic number theory, with the stability condition (RH) ensuring the sum over zeros is well-defined.</p>
+  
+  <h2>I. The Test Function and Setup</h2>
+  <p>Consider the <strong>sharp cutoff test function</strong> in the multiplicative variable. Define the function \(f(y)\) as:
+  \[
+  f(y) = \begin{cases} 
+  1 & \text{if } 1 \leq y \leq x, \\
+  1/2 & \text{if } y = x, \\
+  0 & \text{otherwise}.
+  \end{cases}
+  \]
+  This corresponds to a step function for the sum \(\sum_{n \leq x} \Lambda(n)/n^{1/2}\), but to align with the trace, we use the associated \(g(u) = e^{u/2} f(e^u)\), which is 1 for \(0 \leq u \leq \log x\) (shifted by the critical line factor).</p>
+  
+  <p>The trace \(\Tr(U(g))\) will approximate the smoothed sum over primes, and in the limit of sharp cutoff, it yields Riemann's formula for \(\sum_{n \leq x} \Lambda(n) = x - \sum_\rho \frac{x^\rho}{\rho} + \text{archimedean terms}\).</p>
+  
+  <h2>II. Derivation Step-by-Step</h2>
+  <div class="proof">
+    <h3>Derivation</h3>
+    <ol>
+      <li>
+        <p><strong>Geometric Side from Trace Formula:</strong> Applying the sharp cutoff \(g(u)\) to the prime power sum:
+        \[
+        \sum_p \sum_k \frac{\log p}{p^{k/2}} \left[ g(k \log p) + g(-k \log p) \right] \approx \sum_{p^k \leq x} \frac{\log p}{\sqrt{p^k}} + \sum_{p^k \leq x} \frac{\log p}{p^k \sqrt{p^k}},
+        \]
+        where the second term (from negative logs) is small for large x (converges quickly). The main term is \(\sum_{n \leq x} \frac{\Lambda(n)}{\sqrt{n}}\), with \(\Lambda(n) = \log p\) for n = p^k.</p>
+      </li>
+      
+      <li>
+        <p><strong>Archimedean Term \(W_r(g)\):</strong> For the real place, the integral with sharp cutoff gives the logarithmic term: \(\log(2\pi) + (\log x)/2\), from the Gamma factor in the functional equation.</p>
+      </li>
+      
+      <li>
+        <p><strong>Spectral Side:</strong> The Fourier transform of the cutoff is \(\hat{g}(\gamma) = \frac{\sin(\gamma \log x)}{\gamma}\), so the sum over zeros is:
+        \[
+        \sum_\rho \frac{x^\rho}{\rho} = \sum_\gamma \frac{x^{1/2 + i\gamma}}{1/2 + i\gamma}.
+        \]
+        (assuming RH for real \(\gamma\)).</p>
+      </li>
+      
+      <li>
+        <p><strong>Equating and Integrating:</strong> The explicit formula for the von Mangoldt sum is:
+        \[
+        \sum_{n \leq x} \Lambda(n) = x - \sum_\rho \frac{x^\rho}{\rho} - \log(2\pi) - \frac{1}{2} \log(1 - x^{-2}) + \epsilon,
+        \]
+        where \(\epsilon\) is the error term (under RH, O(\sqrt{x} \log x)). To get \(\pi(x)\), integrate with weight 1/\log n:
+        \[
+        \pi(x) = \li(x) - \sum_\rho \li(x^\rho) + \text{terms},
+        \]
+        where \(\li(y) = \int_2^y \frac{dt}{\log t}\).</p>
+      </li>
+      
+      <li>
+        <p><strong>Dynamical Interpretation:</strong> The cutoff enforces balance; off the critical line, the sum over \(\rho\) would diverge, but stability (RH) keeps it oscillatory.</p>
+      </li>
+    </ol>
+  </div>
+  
+  <h2>III. Numerical Illustration</h2>
+  <p>For x = 10, \(\pi(10) = 4\) (primes: 2,3,5,7). Riemann's formula gives approximate match with known zeros, but exact computation requires many terms. This example shows how the trace leads to prime counting.</p>
+  
+  <div class="footer">
+    <p>Example for discussion over coffee (DE) and tea (UK) October 2025</p>
+    <p>93E3 BEBC C164 D766</p>
+  </div>
+</body>
+</html>
