@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clarification: Prime Power Terms in the Trace 1/2 Shift and the Explicit Formula</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1.5em;
+      color: #1a1a1a;
+      background-color: #fafafa;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+      margin-top: 1.5em;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.8em;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5em;
+    }
+    h2 {
+      font-size: 1.4em;
+      border-left: 5px solid #3498db;
+      padding-left: 0.8em;
+    }
+    .theorem, .proof {
+      margin: 1.5em 0;
+      padding: 1.2em;
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      border-radius: 4px;
+    }
+    .theorem h3 {
+      margin-top: 0;
+      font-style: italic;
+      color: #2c3e50;
+    }
+    .proof {
+      background-color: #eef5fb;
+      border-left-color: #2980b9;
+    }
+    .proof h3 {
+      color: #2980b9;
+    }
+    p {
+      text-align: justify;
+    }
+    ul {
+      padding-left: 1.5em;
+    }
+    li {
+      margin: 0.5em 0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clarification: Origin of the \(p^{k/2}\) Term in the Prime Power Sum</h1>
+  <p>The appearance of the factor \(p^{k/2}\) in the prime power terms of the trace formula is a central and subtle feature. It is <strong>not</strong> an ad-hoc insertion but emerges naturally from the <strong>symmetry under \(s \mapsto 1-s\)</strong> — the functional equation of the zeta function — which is enforced by the decay force \(H_{\text{decay}}\) and the critical line stability condition. This clarification resolves the confusion in the earlier proof sketch and grounds the \(p^{k/2}\) factor in the dynamical balance of amplification and decay.</p>
+
+
+  <h2>I. The Raw Geometric Contribution (No Symmetry)</h2>
+  <p>Consider the local contribution at a prime \(p\) in the adelic trace integral, before imposing the functional equation symmetry. The scaling orbits are labeled by \(p^k\) (\(k \in \mathbb{Z}\)), and the raw sum over fixed points gives:
+  \[
+  W_p^{\text{raw}}(g) = \sum_{k \neq 0} \log p \cdot g(\log |p^k|) = \sum_{k=1}^\infty \log p \left[ g(\log p^k) + g(\log p^{-k}) \right].
+  \]
+  This is the <strong>unbalanced</strong> geometric side, reflecting only the multiplicative structure (Euler product) via \(H_{\text{amp}}\). There is <strong>no \(p^{k/2}\)</strong> here — only \(\log p\) weights and the test function evaluated at \(\pm \log p^k\).</p>
+
+
+  <h2>II. The Role of the Functional Equation and Decay Force</h2>
+  <p>The decay force \(H_{\text{decay}}\) is derived from the involution \(\mathcal{I}: s \mapsto 1-s\), which maps the idele norm \(|j| \mapsto |j|^{-1}\). This symmetry acts on the full space \(C_{\mathbb{Q}} = \mathbb{R}_{>0} \times \mathcal{P}\) and induces a pairing between orbits:
+  \[
+  \text{Orbit at } p^k \quad \leftrightarrow \quad \text{Orbit at } p^{-k}.
+  \]
+  The kernel \(K_{\text{decay}}(x,y)\) couples these orbits with a weight that reflects the change in scale under \(\mathcal{I}\). Specifically, the decay operator introduces a factor of \(|j|^{-1/2}\) to balance the amplification at \(|j|\).</p>
+
+
+  <p>In the trace formula, this symmetry is enforced by <strong>averaging over the paired orbits with the critical line shift</strong>. The stable eigenstates (zeros) live on \(\operatorname{Re}(s) = 1/2\), so the test function \(g\) is evaluated at the <strong>midpoint</strong> of the paired logs:
+  \[
+  \log p^k \quad \text{and} \quad \log p^{-k} = -\log p^k \quad \Rightarrow \quad \text{midpoint} = 0,
+  \]
+  but more importantly, the <strong>weight</strong> of the contribution is shifted by the symmetry factor.</p>
+
+
+  <h2>III. Derivation of the \(p^{k/2}\) Factor</h2>
+  <p>To make this precise, we use the <strong>completed zeta function</strong> and the functional equation. Define the test function in terms of the complex variable \(s\):
+  \[
+  \hat{g}(s) = \int_{-\infty}^\infty g(\lambda) e^{i \lambda s} \, d\lambda.
+  \]
+  The spectral side of the explicit formula is:
+  \[
+  \sum_\rho \hat{g}(\rho) + \sum_\rho \hat{g}(1-\rho),
+  \]
+  where \(\rho\) are the non-trivial zeros. Under the functional equation \(\xi(s) = \xi(1-s)\), the zeros come in pairs \(\rho\) and \(1-\rho\), and the symmetry forces:
+  \[
+  \hat{g}(\rho) + \hat{g}(1-\rho) = 2 \operatorname{Re} \hat{g}(\rho).
+  \]
+  On the critical line, \(\rho = 1/2 + i\gamma\), so \(1-\rho = 1/2 - i\gamma\), and the pair sums to a real contribution.</p>
+
+
+  <p>Now, on the geometric side, the prime power \(p^k\) corresponds to a term in the Dirichlet series at \(n = p^k\). The Euler factor is:
+  \[
+  (1 - p^{-s})^{-1} = \sum_{k=0}^\infty p^{-k s}.
+  \]
+  Under \(s \mapsto 1-s\), this becomes:
+  \[
+  (1 - p^{s-1})^{-1} = \sum_{k=0}^\infty p^{-k(s-1)} = \sum_{k=0}^\infty p^{k(1-s)}.
+  \]
+  The <strong>symmetric combination</strong> that respects the functional equation is the average:
+  \[
+  \frac{1}{2} \left[ (1 - p^{-s})^{-1} + (1 - p^{s-1})^{-1} \right].
+  \]
+  For the non-trivial part (\(k \geq 1\)), the cross terms yield:
+  \[
+  p^{-k s} + p^{-k(1-s)} = p^{-k s} + p^{-k + k s} = p^{-k/2} (p^{-k(s - 1/2)} + p^{k(s - 1/2)}).
+  \]
+  Thus, the <strong>symmetric weight</strong> for the prime power \(p^k\) is:
+  \[
+  p^{-k/2} \cdot 2 \cosh(k (s - 1/2) \log p).
+  \]
+  On the critical line \(s = 1/2\), this simplifies to:
+  \[
+  p^{-k/2} \cdot 2.
+  \]
+  Therefore, the contribution per prime power in the explicit formula is:
+  \[
+  \frac{\log p}{p^{k/2}} \left[ g(k \log p) + g(-k \log p) \right],
+  \]
+  where the \(p^{-k/2}\) comes from the <strong>functional equation symmetry</strong>, and the factor of 2 is absorbed into the test function normalization.</p>
+
+
+  <div class="theorem">
+    <h3>Corrected Trace Formula (Prime Power Terms)</h3>
+    <p>The geometric side of the trace formula is:
+    \[
+    \Tr(U(g)) = \sum_p \sum_{k=1}^\infty \frac{\log p}{p^{k/2}} \left[ g(k \log p) + g(-k \log p) \right] + W_r(g),
+    \]
+    where:
+    <ul>
+      <li>\(p^{k/2}\) arises from the symmetry \(s \mapsto 1-s\) enforced by \(H_{\text{decay}}\),</li>
+      <li>\(\log p\) is the measure of the orbit from \(H_{\text{amp}}\),</li>
+      <li>\(W_r(g)\) is the archimedean (real place) contribution.</li>
+    </ul>
+    </p>
+  </div>
+
+
+  <h2>IV. Dynamical Interpretation</h2>
+  <p>In the Primal Manifold framework:
+  <ul>
+    <li>\(H_{\text{amp}}\) generates the raw sum \(\sum \log p \cdot g(\log p^k)\),</li>
+    <li>\(H_{\text{decay}}\) enforces the pairing \(p^k \leftrightarrow p^{-k}\) with weight \(p^{-k/2}\),</li>
+    <li>Stability (\(H_{\text{amp}} = H_{\text{decay}}\)) occurs only when the test function is centered on the critical line, i.e., \(g(\lambda) = g(-\lambda)\) and evaluated at \(\lambda = k \log p - k \log p = 0\) in the symmetric frame.</li>
+  </ul>
+  The \(p^{k/2}\) is the <strong>price of symmetry</strong> — the decay force required to balance the explosive growth of the Euler product.</p>
+
+
+  <div class="footer">
+    <p>Clarified for discussion over coffee (DE) and tea (UK) October 2025</p>
+    <p>93E3 BEBC C164 D766</p>
+  </div>
+</body>
+</html>
