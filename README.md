@@ -15,11 +15,9 @@
 
 ##
 
-  [5.The Kernel](https://xorbkpt.github.io/Riemann-Hypothesis/Kernel_Trace_Adelic_Path_Integral/)
+  [5.Kernel](https://xorbkpt.github.io/Riemann-Hypothesis/Kernel_Trace_Adelic_Path_Integral/)
 
-  [6.The RG](https://xorbkpt.github.io/Formalizing_the_Dynamics_Amplification_Decay_Renormalization_Group/)
-
-  [7.Expanded Proof](https://xorbkpt.github.io/Riemann-Hypothesis/Expanded_Proof_Trace_Formula_for_Operator_H_via_Adelic_Path_Integral)
+  [7.Renormalization_Group](https://xorbkpt.github.io/Riemann-Hypothesis/Expanded_Proof_Trace_Formula_for_Operator_H_via_Adelic_Path_Integral)
 
   [8.Prime Power Terms](https://xorbkpt.github.io/Riemann-Hypothesis/Clarification_Prime_Power_Terms_Explicit_Formula/)
 
