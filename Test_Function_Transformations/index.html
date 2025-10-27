@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clarification: Test Function Transformations and the \(p^{k/2}\) Factor</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1.5em;
+      color: #1a1a1a;
+      background-color: #fafafa;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+      margin-top: 1.5em;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.8em;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5em;
+    }
+    h2 {
+      font-size: 1.4em;
+      border-left: 5px solid #3498db;
+      padding-left: 0.8em;
+    }
+    .theorem, .proof {
+      margin: 1.5em 0;
+      padding: 1.2em;
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      border-radius: 4px;
+    }
+    .theorem h3 {
+      margin-top: 0;
+      font-style: italic;
+      color: #2c3e50;
+    }
+    .proof {
+      background-color: #eef5fb;
+      border-left-color: #2980b9;
+    }
+    .proof h3 {
+      color: #2980b9;
+    }
+    p {
+      text-align: justify;
+    }
+    ul {
+      padding-left: 1.5em;
+    }
+    li {
+      margin: 0.5em 0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clarification: Test Function Transformations and the Origin of \(p^{k/2}\)</h1>
+  <p>The factor \(p^{k/2}\) in the prime power sum of the explicit formula arises from a <strong>change of variables</strong> in the test function that aligns the geometric side with the functional equation symmetry \(s \mapsto 1-s\). This transformation is standard in the derivation of the Riemann-Weil explicit formula and is directly tied to the decay force \(H_{\text{decay}}\) in our dynamical framework. This note clarifies the precise transformation and its role in producing the \(p^{k/2}\) factor.</p>
+
+
+  <h2>I. The Raw Trace Formula (No Symmetry)</h2>
+  <p>From the adelic path integral, the geometric contribution at a prime \(p\) is:
+  \[
+  W_p(g) = \sum_{k=1}^\infty \log p \left[ g(k \log p) + g(-k \log p) \right].
+  \]
+  This is the <strong>raw</strong> sum over scaling orbits \(p^k\) and \(p^{-k}\), weighted by the von Mangoldt function \(\Lambda(p^k) = \log p\). The test function \(g\) is evaluated directly at \(\pm k \log p\), with no \(p^{k/2}\).</p>
+
+
+  <h2>II. The Symmetry Transformation: \(g(u) \mapsto e^{u/2} f(e^u)\)</h2>
+  <p>To enforce the functional equation \(\xi(s) = \xi(1-s)\), we introduce a <strong>change of test function</strong> that shifts the argument to the critical line. Define a new test function \(f\) via:
+  \[
+  g(u) = e^{u/2} f(e^u).
+  \]
+  This transformation has the following effects:</p>
+  <ul>
+    <li><strong>Shift to multiplicative variable:</strong> Let \(t = e^u\), so \(u = \log t\), and \(g(\log t) = t^{1/2} f(t)\).</li>
+    <li><strong>Pairing under \(s \mapsto 1-s\):</strong> The term \(p^{-s}\) becomes \(p^{-(1-s)} = p^{s-1}\), and the symmetric weight is \(p^{-s} + p^{s-1} = p^{-1/2} (p^{-(s-1/2)} + p^{(s-1/2)})\).</li>
+    <li><strong>Critical line centering:</strong> On \(\operatorname{Re}(s) = 1/2\), the factor \(p^{-1/2}\) appears naturally.</li>
+  </ul>
+
+
+  <h2>III. Applying the Transformation</h2>
+  <p>Substitute \(g(u) = e^{u/2} f(e^u)\) into the raw sum:
+  \[
+  g(k \log p) = e^{(k \log p)/2} f(p^k) = p^{k/2} f(p^k),
+  \]
+  \[
+  g(-k \log p) = e^{(-k \log p)/2} f(p^{-k}) = p^{-k/2} f(p^{-k}).
+  \]
+  The prime contribution becomes:
+  \[
+  W_p(g) = \sum_{k=1}^\infty \log p \left[ p^{k/2} f(p^k) + p^{-k/2} f(p^{-k}) \right].
+  \]
+  Under the symmetry \(p^k \leftrightarrow p^{-k}\), and assuming \(f\) is even in the log variable (or using the functional equation), this simplifies. The standard explicit formula uses \(f\) such that \(f(p^{-k}) = p^{-k} f(p^k)\) (from the Euler factor duality), but the dominant term is:
+  \[
+  \log p \cdot p^{k/2} f(p^k).
+  \]
+  Thus, the <strong>effective weight</strong> for the prime power \(p^k\) is:
+  \[
+  \frac{\log p}{p^{k/2}} f(p^k),
+  \]
+  where the \(p^{k/2}\) in the denominator comes from <strong>normalizing by the symmetry factor</strong> \(p^{k/2}\) introduced by the transformation.
+
+
+  <div class="theorem">
+    <h3>Transformed Trace Formula</h3>
+    <p>After the test function change \(g(u) = e^{u/2} f(e^u)\), the trace formula becomes:
+    \[
+    \sum_\rho f\left( \frac{\rho}{2\pi i} \right) = \sum_n \frac{\Lambda(n)}{\sqrt{n}} f(n) + \text{archimedean terms},
+    \]
+    which is the standard Riemann-Weil explicit formula, with \(\Lambda(n) = \log p\) for \(n = p^k\), and \(\sqrt{n} = p^{k/2}\).</p>
+  </div>
+
+
+  <h2>IV. Dynamical Interpretation in the Primal Manifold</h2>
+  <p>In our framework:
+  <ul>
+    <li>\(H_{\text{amp}}\) generates the raw sum \(\sum \log p \cdot g(\pm k \log p)\),</li>
+    <li>\(H_{\text{decay}}\) enforces the transformation \(g(u) \to e^{u/2} f(e^u)\) via the involution \(\mathcal{I}: s \mapsto 1-s\),</li>
+    <li>The \(p^{k/2}\) factor is the <strong>decay cost</strong> required to balance the amplification at scale \(p^k\).</li>
+  </ul>
+  The transformation is not arbitrary — it is the mathematical manifestation of the <strong>stability condition on the critical line</strong>.
+
+
+  <div class="footer">
+    <p>Clarified for discussion over coffee (DE) and tea (UK) October 2025</p>
+    <p>93E3 BEBC C164 D766</p>
+  </div>
+</body>
+</html>
