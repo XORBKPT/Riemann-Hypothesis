@@ -15,25 +15,27 @@
 
 ##
 
-  [5.Kernel](https://xorbkpt.github.io/Riemann-Hypothesis/Kernel_Trace_Adelic_Path_Integral/)
-  
-  [6.Expanded Proof](https://xorbkpt.github.io/Riemann-Hypothesis/Expanded_Proof_Trace_Formula_for_Operator_H_via_Adelic_Path_Integral)
+  [5.The Kernel](https://xorbkpt.github.io/Riemann-Hypothesis/Kernel_Trace_Adelic_Path_Integral/)
 
-  [7.Prime Power Terms](https://xorbkpt.github.io/Riemann-Hypothesis/Clarification_Prime_Power_Terms_Explicit_Formula/)
+  [6.The RG](https://xorbkpt.github.io/Formalizing_the_Dynamics_Amplification_Decay_Renormalization_Group/
 
-  [8.Deriving R_W](https://xorbkpt.github.io/Riemann-Hypothesis/Deriving_Riemann_Weil_from_Trace_Formula/)
+  [7.Expanded Proof](https://xorbkpt.github.io/Riemann-Hypothesis/Expanded_Proof_Trace_Formula_for_Operator_H_via_Adelic_Path_Integral)
 
-  [9.Test Function](https://xorbkpt.github.io/Riemann-Hypothesis/Test_Function_Transformations/)
+  [8.Prime Power Terms](https://xorbkpt.github.io/Riemann-Hypothesis/Clarification_Prime_Power_Terms_Explicit_Formula/)
 
-  [10.Count from Trace](https://xorbkpt.github.io/Riemann-Hypothesis/Riemann_Prime_Counting_Formula_from_Trace/)
+  [9.Deriving R_W](https://xorbkpt.github.io/Riemann-Hypothesis/Deriving_Riemann_Weil_from_Trace_Formula/)
+
+  [10.Test Function](https://xorbkpt.github.io/Riemann-Hypothesis/Test_Function_Transformations/)
+
+  [11.Count from Trace](https://xorbkpt.github.io/Riemann-Hypothesis/Riemann_Prime_Counting_Formula_from_Trace/)
 
 ##
   
-[11.Conjectural Proof of RH via Dynamical Stability and RG Flow](https://xorbkpt.github.io/Riemann-Hypothesis/Conjectural_Proof_of_Riemann_Hypothesis_via_Dynamical_Stability_and_RG_Flow/)
+[12.Conjectural Proof of RH via Dynamical Stability and RG Flow](https://xorbkpt.github.io/Riemann-Hypothesis/Conjectural_Proof_of_Riemann_Hypothesis_via_Dynamical_Stability_and_RG_Flow/)
 
-[12.Summary](https://xorbkpt.github.io/Riemann-Hypothesis/Summary_Conjectural_Proofs_and_Insights)
+[13.Summary](https://xorbkpt.github.io/Riemann-Hypothesis/Summary_Conjectural_Proofs_and_Insights)
 
-[Future Work](https://xorbkpt.github.io/Riemann-Hypothesis/Connection_Between_Riemann_Hypothesis_and_QFT)
+[14.Future Work](https://xorbkpt.github.io/Riemann-Hypothesis/Connection_Between_Riemann_Hypothesis_and_QFT)
 
 
 work in progress..
