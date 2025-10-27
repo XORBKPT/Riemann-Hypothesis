@@ -1,6 +1,7 @@
 ---
 
-## Primes as "Topological Defects" which define a manifold's structure; don't chase the zeros further down the line; ask why they are there <80)
+## Primes as topological defects - I gave up chasing the zeros...
+.....so this is just an inquiry into *"why they are there?"* <80)
 
 [Riemann Musings with Diagrams](https://xorbkpt.github.io/Riemann-Hypothesis/)
 
