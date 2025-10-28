@@ -67,11 +67,11 @@
   </style>
 </head>
 <body>
-  <h1>Explicit Derivation Example: Riemann's Prime Counting Formula from the Trace Formula</h1>
-  <p>To illustrate the derivation of the explicit formula from the trace formula, we provide a concrete example using a <strong>sharp cutoff test function</strong>, which recovers Riemann's original formula for the prime counting function \(\pi(x) = \sum_{p \leq x} 1\). This test function is not smooth (as required for strict convergence in Weil's formula), but it serves as a distributional limit and demonstrates the process. The example bridges the dynamical trace formula to classical analytic number theory, with the stability condition (RH) ensuring the sum over zeros is well-defined.</p>
+  <h1>Derivation: Riemann's Prime Counting Formula from the Trace Formula</h1>
+  <p>To show the derivation of the explicit formula from the trace formula, here's an example using a <strong>sharp cutoff test function</strong>, which recovers Riemann's original formula for the prime counting function \(\pi(x) = \sum_{p \leq x} 1\). This test function is not smooth (as for strict convergence in Weil's formula), but it does serve as a distributional limit and demonstrates the process. This example will show how the bridge works between the dynamical trace formula to classical analytic number theory, where the stability condition (RH) defines the sum over zeros.</p>
   
-  <h2>I. The Test Function and Setup</h2>
-  <p>Consider the <strong>sharp cutoff test function</strong> in the multiplicative variable. Define the function \(f(y)\) as:
+  <h2>I. Test Function and Setup</h2>
+  <p>Musing on the <strong>sharp cutoff test function</strong> in the multiplicative variable; define the function \(f(y)\) as:
   \[
   f(y) = \begin{cases} 
   1 & \text{if } 1 \leq y \leq x, \\
@@ -79,11 +79,20 @@
   0 & \text{otherwise}.
   \end{cases}
   \]
-  This corresponds to a step function for the sum \(\sum_{n \leq x} \Lambda(n)/n^{1/2}\), but to align with the trace, we use the associated \(g(u) = e^{u/2} f(e^u)\), which is 1 for \(0 \leq u \leq \log x\) (shifted by the critical line factor).</p>
+  This corresponds to a step function for the sum \(\sum_{n \leq x} \Lambda(n)/n^{1/2}\), but to align with the trace, the associated \(g(u) = e^{u/2} f(e^u)\), is used which is 1 for \(0 \leq u \leq \log x\) (shifted by the critical line factor).</p>
   
-  <p>The trace \(\Tr(U(g))\) will approximate the smoothed sum over primes, and in the limit of sharp cutoff, it yields Riemann's formula for \(\sum_{n \leq x} \Lambda(n) = x - \sum_\rho \frac{x^\rho}{\rho} + \text{archimedean terms}\).</p>
-  
-  <h2>II. Derivation Step-by-Step</h2>
+  <p>The trace
+  \[
+  \operatorname{Tr}(U(g)) 
+  \]
+   will approximate the smoothed sum over primes and in the limit of sharp cutoff, it looks like it produces Riemann's formula for:
+   \[
+   \sum_{n \leq x} \Lambda(n) = x - \sum_\rho \frac{x^\rho}{\rho} + \text{archimedean terms}.
+   \]
+   </p>
+ 
+   
+   <h2>II. Derivation</h2>
   <div class="proof">
     <h3>Derivation</h3>
     <ol>
@@ -92,7 +101,7 @@
         \[
         \sum_p \sum_k \frac{\log p}{p^{k/2}} \left[ g(k \log p) + g(-k \log p) \right] \approx \sum_{p^k \leq x} \frac{\log p}{\sqrt{p^k}} + \sum_{p^k \leq x} \frac{\log p}{p^k \sqrt{p^k}},
         \]
-        where the second term (from negative logs) is small for large x (converges quickly). The main term is \(\sum_{n \leq x} \frac{\Lambda(n)}{\sqrt{n}}\), with \(\Lambda(n) = \log p\) for n = p^k.</p>
+        where the second term (from negative logs) is small for large x (converges quickly). Main term is \(\sum_{n \leq x} \frac{\Lambda(n)}{\sqrt{n}}\), with \(\Lambda(n) = \log p\) for n = p^k.</p>
       </li>
       
       <li>
@@ -114,22 +123,22 @@
         \]
         where \(\epsilon\) is the error term (under RH, O(\sqrt{x} \log x)). To get \(\pi(x)\), integrate with weight 1/\log n:
         \[
-        \pi(x) = \li(x) - \sum_\rho \li(x^\rho) + \text{terms},
+        \pi(x) = \operatorname{li}(x)\ - \sum_\rho \operatorname{li}(x^\rho) + \text{terms},
         \]
-        where \(\li(y) = \int_2^y \frac{dt}{\log t}\).</p>
+        where \(\operatorname{li}(y)\ = \int_2^y \frac{dt}{\log t}\).</p>
       </li>
       
       <li>
-        <p><strong>Dynamical Interpretation:</strong> The cutoff enforces balance; off the critical line, the sum over \(\rho\) would diverge, but stability (RH) keeps it oscillatory.</p>
+        <p><strong>Its dynamic:</strong> Cutoff <strong>enforces</strong> balance; off the critical line sum over \(\rho\) would diverge, but stability (RH) keeps it oscillatory.</p>
       </li>
     </ol>
   </div>
   
-  <h2>III. Numerical Illustration</h2>
-  <p>For x = 10, \(\pi(10) = 4\) (primes: 2,3,5,7). Riemann's formula gives approximate match with known zeros, but exact computation requires many terms. This example shows how the trace leads to prime counting.</p>
+  <h2>III. Numerical View</h2>
+  <p>For x = 10, \(\pi(10) = 4\) (primes: 2,3,5,7). Riemann's formula gives the approximate match with known zeros (exact computation needs many terms). This shows how the <strong>trace</strong> leads to prime counting.</p>
   
   <div class="footer">
-    <p>Example for discussion over coffee (DE) and tea (UK) October 2025</p>
+    <p>For chalk and dusty green board debates over coffee (DE) and tea (UK) October 2025</p>
     <p>93E3 BEBC C164 D766</p>
   </div>
 </body>
