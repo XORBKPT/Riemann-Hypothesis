@@ -68,24 +68,24 @@
 </head>
 <body>
   <h1>Deriving the Riemann-Weil Explicit Formula from the Trace Formula</h1>
-  <p>This document derives the Riemann-Weil explicit formula from the trace formula developed in the previous papers. The trace formula, obtained via the adelic path integral, gives the geometric (prime) side. By equating it to the spectral trace (sum over eigenvalues of the operator \(H\)), we recover the explicit formula under the Hilbert-Pólya conjecture, where the eigenvalues correspond to the imaginary parts of the zeta zeros. This derivation reinforces the dynamical interpretation: the RH as stability on the critical line.</p>
+  <p>This document derives the Riemann-Weil explicit formula from the trace formula developed in the previous papers. The trace formula, obtained via the adelic path integral, gives the geometric (prime) side. By equating it to the spectral trace (sum over eigenvalues of the operator \(H\)), recover the explicit formula under the Hilbert-Pólya conjecture, where the eigenvalues correspond to the imaginary parts of the zeta zeros. The derivation just reinforces the dynamical interpretation: the RH percieved as stability on the critical line.</p>
   
-  <h2>I. Setup and Recall</h2>
-  <p>Recall the operator \(H\) on \(L^2(\mathcal{P})\), decomposed as \(H = H_{\text{amp}} - H_{\text{decay}}\). Under the Hilbert-Pólya conjecture, \(H\) is self-adjoint with eigenvalues \(\gamma_n\), where the non-trivial zeros are \(\rho_n = 1/2 + i \gamma_n\) (assuming RH for real eigenvalues).</p>
+  <h2>I. Groundwork</h2>
+  <p>So the operator \(H\) on \(L^2(\mathcal{P})\), decomposed as \(H = H_{\text{amp}} - H_{\text{decay}}\). Under the Hilbert-Pólya conjecture, \(H\) is self-adjoint with eigenvalues \(\gamma_n\), where the non-trivial zeros are \(\rho_n = 1/2 + i \gamma_n\) (assuming RH for real eigenvalues).</p>
   
-  <p>For a test function \(g: \mathbb{R} \to \mathbb{C}\) (even, rapid decay), define the operator
+  <p>For a test function \(g: \mathbb{R} \to \mathbb{C}\) (even as rapid decay), define the operator
   \[
   U(g) = \int_{-\infty}^\infty g(t) e^{i t H} \, dt.
   \]
-  This is the Fourier transform version, motivated by quantum trace formulas (e.g., Gutzwiller). Spectrally,
+  This is the <strong>Fourier transform</strong> version, motivated by quantum trace formulas (e.g., Gutzwiller). Spectrally,
   \[
-  \Tr(U(g)) = \sum_n \hat{g}(\gamma_n),
+  \operatorname{Tr}(U(g)) = \sum_n \hat{g}(\gamma_n),
   \]
   where \(\hat{g}(\xi) = \int g(t) e^{i t \xi} \, dt\) is the Fourier transform (convention without 2\pi).</p>
   
   <p>From the path integral trace formula (geometric side),
   \[
-  \Tr(U(g)) = \sum_p \sum_{k=1}^\infty \frac{\log p}{p^{k/2}} \left[ g(k \log p) + g(-k \log p) \right] + W_r(g),
+  \operatorname{Tr}(U(g)) = \sum_p \sum_{k=1}^\infty \frac{\log p}{p^{k/2}} \left[ g(k \log p) + g(-k \log p) \right] + W_r(g),
   \]
   where \(W_r(g)\) is the archimedean term.</p>
   
@@ -96,7 +96,7 @@
       <li>
         <p><strong>Spectral Side:</strong> Assuming the Hilbert-Pólya operator \(H\) has eigenvalues \(\gamma_n\) (heights of zeros), the trace is
         \[
-        \Tr(U(g)) = \sum_n \int g(t) e^{i t \gamma_n} \, dt = \sum_n \hat{g}(\gamma_n).
+        \operatorname{Tr}(U(g)) = \sum_n \int g(t) e^{i t \gamma_n} \, dt = \sum_n \hat{g}(\gamma_n).
         \]
         To include trivial zeros and poles, extend the sum to all \(\rho\) (non-trivial zeros) plus contributions from trivial zeros (\(\rho = -2n\)) and the pole at \(s=1\).</p>
       </li>
@@ -117,11 +117,11 @@
         \[
         \sum_\rho h\left( \frac{\gamma}{2\pi} \right) = \int h(t) d\Pi(t) + \text{terms},
         \]
-        but simpler: the common form is
+        the common form is:
         \[
         \sum_\rho h\left( \gamma \right) = h(0) + h(i/2) - \sum_n \frac{\Lambda(n)}{\sqrt{n}} [h(\log n) + h(-\log n)] + \int \frac{\Gamma'(1+s)}{\Gamma(1+s)} h(s) ds,
         \]
-        (up to constants). Comparing, our \(g(t) = h(t)\), and the prime term matches with \(\Lambda(p^k) = \log p\), \(\sqrt{p^k} = p^{k/2}\).</p>
+        (up to constants). Comparing,  \(g(t) = h(t)\),  and the prime term matches with \(\Lambda(p^k) = \log p\), \(\sqrt{p^k} = p^{k/2}\).</p>
       </li>
       
       <li>
@@ -129,20 +129,20 @@
       </li>
       
       <li>
-        <p><strong>Full Formula:</strong> Including archimedean and trivial terms from \(W_r(g)\) and pole/residues, we obtain the Riemann-Weil explicit formula:
+        <p><strong>Complete Formula:</strong> include archimedean and trivial terms from \(W_r(g)\) and pole/residues, to get the Riemann-Weil explicit formula:
         \[
         \hat{g}(0) + \hat{g}(1) - \sum_\rho \hat{g}(\rho) = \sum_p \log p \sum_{k=1}^\infty \left[ g(p^k) + p^{-k} g(p^{-k}) \right] + W_r(g),
         \]
-        where adjusting \(g(u) = e^{u/2} f(e^u)\) introduces the \(p^{k/2}\) via shift (see clarification paper).</p>
+        where adjusting \(g(u) = e^{u/2} f(e^u)\) introduces the \(p^{k/2}\) via shift (see previous clean up paper from last debate).</p>
       </li>
     </ol>
   </div>
   
   <h2>III. Conclusion</h2>
-  <p>The trace formula provides the geometric side; equating to the spectral trace yields the explicit formula, with RH as the condition for real eigenvalues.</p>
+  <p>Trace formula is the geometric side = the spectral trace yields (explicit formula): RH is percieved as the condition for real eigenvalues.</p>
   
   <div class="footer">
-    <p>For discussion over coffee (DE) and tea (UK) October 2025</p>
+    <p>For <strong>entertaining</strong> discussion over coffee (DE) and tea (UK) October 2025</p>
     <p>93E3 BEBC C164 D766</p>
   </div>
 </body>
