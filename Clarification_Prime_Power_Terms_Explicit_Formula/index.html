@@ -67,11 +67,11 @@
   </style>
 </head>
 <body>
-  <h1>Clarification: Origin of the \(p^{k/2}\) Term in the Prime Power Sum</h1>
-  <p>The appearance of the factor \(p^{k/2}\) in the prime power terms of the trace formula is subtle: It is <strong>not</strong> an ad-hoc idea but emerges from the <strong>symmetry under \(s \mapsto 1-s\)</strong> — the functional equation of the zeta function — which is enforced by the decay force \(H_{\text{decay}}\) and the critical line stability condition. This clarification resolves the confusion in the earlier proof sketch and grounds the \(p^{k/2}\) factor in the dynamical balance of amplification and decay.</p>
+  <h1>Origin of the \(p^{k/2}\) Term in the Prime Power Sum</h1>
+  <p>The factor \(p^{k/2}\) in the prime power terms of the trace formula is subtle: It is <strong>not</strong> an ad-hoc idea but emerges from the <strong>symmetry under \(s \mapsto 1-s\)</strong> — the functional equation of the zeta function is enforced by the decay force \(H_{\text{decay}}\) and the critical line stability condition. This resolves the debate in the earlier proof sketch, grounding the \(p^{k/2}\) factor in the dynamical balance of amplification and decay.</p>
 
 
-  <h2>I. The Raw Geometric Contribution (No Symmetry)</h2>
+  <h2>I. Raw Geometric Contribution (No Symmetry)</h2>
   <p>Consider the local contribution at a prime \(p\) in the adelic trace integral, before imposing the functional equation symmetry. The scaling orbits are labeled by \(p^k\) (\(k \in \mathbb{Z}\)), and the raw sum over fixed points gives:
   \[
   W_p^{\text{raw}}(g) = \sum_{k \neq 0} \log p \cdot g(\log |p^k|) = \sum_{k=1}^\infty \log p \left[ g(\log p^k) + g(\log p^{-k}) \right].
@@ -79,7 +79,7 @@
   This is the <strong>unbalanced</strong> geometric side, reflecting only the multiplicative structure (Euler product) via \(H_{\text{amp}}\). There is <strong>no \(p^{k/2}\)</strong> here — only \(\log p\) weights and the test function evaluated at \(\pm \log p^k\).</p>
 
 
-  <h2>II. The Role of the Functional Equation and Decay Force</h2>
+  <h2>II. Role of the Functional Equation and Decay Force</h2>
   <p>The decay force \(H_{\text{decay}}\) is derived from the involution \(\mathcal{I}: s \mapsto 1-s\), which maps the idele norm \(|j| \mapsto |j|^{-1}\). This symmetry acts on the full space \(C_{\mathbb{Q}} = \mathbb{R}_{>0} \times \mathcal{P}\) and induces a pairing between orbits:
   \[
   \text{Orbit at } p^k \quad \leftrightarrow \quad \text{Orbit at } p^{-k}.
@@ -110,7 +110,7 @@
   On the critical line, \(\rho = 1/2 + i\gamma\), so \(1-\rho = 1/2 - i\gamma\), and the pair sums to a real contribution.</p>
 
 
-  <p>Now, on the geometric side, the prime power \(p^k\) corresponds to a term in the Dirichlet series at \(n = p^k\). The Euler factor is:
+  <p>On the geometric side, the prime power \(p^k\) corresponds to a term in the Dirichlet series at \(n = p^k\). The Euler factor is:
   \[
   (1 - p^{-s})^{-1} = \sum_{k=0}^\infty p^{-k s}.
   \]
@@ -142,10 +142,10 @@
 
 
   <div class="theorem">
-    <h3>Corrected Trace Formula (Prime Power Terms)</h3>
+    <h3>Cleaned Up: Trace Formula (Prime Power Terms)</h3>
     <p>The geometric side of the trace formula is:
     \[
-    \Tr(U(g)) = \sum_p \sum_{k=1}^\infty \frac{\log p}{p^{k/2}} \left[ g(k \log p) + g(-k \log p) \right] + W_r(g),
+    \operatorname{Tr}(U(g)) = \sum_p \sum_{k=1}^\infty \frac{\log p}{p^{k/2}} \left[ g(k \log p) + g(-k \log p) \right] + W_r(g),
     \]
     where:
     <ul>
@@ -164,11 +164,11 @@
     <li>\(H_{\text{decay}}\) enforces the pairing \(p^k \leftrightarrow p^{-k}\) with weight \(p^{-k/2}\),</li>
     <li>Stability (\(H_{\text{amp}} = H_{\text{decay}}\)) occurs only when the test function is centered on the critical line, i.e., \(g(\lambda) = g(-\lambda)\) and evaluated at \(\lambda = k \log p - k \log p = 0\) in the symmetric frame.</li>
   </ul>
-  The \(p^{k/2}\) is the <strong>price of symmetry</strong> — the decay force required to balance the explosive growth of the Euler product.</p>
+  The \(p^{k/2}\) is the <strong>cost of symmetry</strong> — the decay force required to balance the explosive growth of the Euler product. Just like NPV has imputed costs (some corp suits can't see) and why startups <a href="https://netrunnerdb.com/en/card/21109">flame out</a> in cash burn even though they are "making money".</p>
 
 
   <div class="footer">
-    <p>Clarified for discussion over coffee (DE) and tea (UK) October 2025</p>
+    <p>For <strong>more</strong> discussion over coffee (DE) and tea (UK) October 2025</p>
     <p>93E3 BEBC C164 D766</p>
   </div>
 </body>
