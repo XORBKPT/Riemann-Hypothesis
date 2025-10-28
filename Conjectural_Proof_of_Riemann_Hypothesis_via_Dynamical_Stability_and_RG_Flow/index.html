@@ -67,27 +67,27 @@
   </style>
 </head>
 <body>
-  <h1>Conjectural Proof of the Riemann Hypothesis via Dynamical Stability and RG Flow</h1>
-  <p>This paper attempts a full, conjectural proof of the Riemann Hypothesis (RH) based on the dynamical framework developed in prior works. Building on the Primal Manifold \(\mathcal{P}\), the kernel \(K(x,y)\), and the trace formula, we show that non-trivial zeros must lie on \(\Re(s) = 1/2\) as the only stable fixed point of the renormalization group (RG) flow. This relies on unproven but plausible assumptions from quantum chaos and RG theory (e.g., cyclic RG models). We then provide numerical verification of low-lying zeros and prime counts under RH.</p>
+  <h1>Riemann Hypothesis via Dynamical Stability and RG Flow</h1>
+  <p>This attempts a conjectural proof of the Riemann Hypothesis (RH) based on the dynamical framework. Building on the Primal Manifold \(\mathcal{P}\), the kernel \(K(x,y)\), and the trace formula (see links below) to show that non-trivial zeros must lie on \(\Re(s) = 1/2\) as the only stable fixed point of the renormalization group (RG) flow. This relies on unproven assumptions from quantum chaos and RG theory (e.g., cyclic RG models). In section II below is a basic numerical verification of low-lying zeros and prime counts under RH as a refresher for students.</p>
   
   <h2>I. Conjectural Proof</h2>
   <div class="theorem">
-    <h3>Theorem: Riemann Hypothesis (Conjectural)</h3>
+    <h3>Riemann Hypothesis</h3>
     <p>All non-trivial zeros of \(\zeta(s)\) have \(\Re(s) = 1/2\).</p>
   </div>
   
   <div class="proof">
-    <h3>Proof (Conjectural)</h3>
+    <h3>Draft Proof Idea</h3>
     <ol>
-      <li><strong>Stability Condition:</strong> From prior, zeros are stable eigenstates where \(H_{\text{amp}} \psi = H_{\text{decay}} \psi\).</li>
+      <li><strong>Stability Condition:</strong> From prior work (see links below), zeros are stable eigenstates where \(H_{\text{amp}} \psi = H_{\text{decay}} \psi\).</li>
       <li><strong>RG Flow:</strong> The beta function \(\beta = [H_{\text{amp}}, H_{\text{decay}}]\) has fixed point at \(\Re(s) = 1/2\), stable per linearization (negative eigenvalues).</li>
-      <li><strong>Off-Line Instability:</strong> Perturbations away from 1/2 lead to divergence (amplification dominates) or collapse (decay dominates), precluding zeros.</li>
-      <li><strong>Conclusion:</strong> Assuming RG captures the scaling, RH holds.</li>
+      <li><strong>Off-Line Instability:</strong> Disturbance away from this equilibrium, away from 1/2, then leads to divergence (where amplification dominates) or collapse (where decay dominates), making the zeros impossible.</li>
+      <li><strong>Conclusion:</strong> Assuming renormalization group (RG) flow captures the scaling, <strong>RH holds</strong>.</li>
     </ol>
   </div>
   
   <h2>II. Numerical Verification</h2>
-  <p>We verify low-lying zeros by computing \(\zeta(1/2 + it) \approx 0\) for known \(t\), and prime count for \(x=1000\).</p>
+  <p>Verify low-lying zeros by computing \(\zeta(1/2 + it) \approx 0\) for known \(t\), and prime count for \(x=1000\).</p>
   
   <ul>
     <li><strong>Zeta Zeros:</strong> For \(t \approx 14.1347\), \(\zeta(0.5 + it) \approx -1.05 \times 10^{-16} + 6.59 \times 10^{-16} i\); similarly for 21.0220 and 25.0109 — all near zero within precision.</li>
@@ -95,7 +95,7 @@
   </ul>
   
   <div class="footer">
-    <p>Conjectural; for discussion over coffee (DE) and tea (UK) October 2025</p>
+    <p>Winter nights will just fly by with this treasure map. October 2025</p>
     <p>93E3 BEBC C164 D766</p>
   </div>
 </body>
