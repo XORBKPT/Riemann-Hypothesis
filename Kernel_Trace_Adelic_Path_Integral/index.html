@@ -67,7 +67,7 @@
   </style>
 </head>
 <body>
-  <h1>Construction of the Kernel \(K(x,y)\) and Evaluation of the Trace via Adelic Path Integral</h1>
+  <h1>Building Kernel \(K(x,y)\) and Evaluation of the Trace via Adelic Path Integral</h1>
   <p>Building on the formal definition of the Primal Manifold \(\mathcal{P}\), its Hilbert space \(L^2(\mathcal{P})\), and the decomposition via Pontryagin duality, address the second challenge: constructing the kernel \(K(x,y)\) of the non-local operator \(H\) then evaluate the trace of the associated operator using a non-perturbative adelic path integral approach, linking it to the Riemann-Weil explicit formula. This step provides the causal mechanism for the stability criterion, with the amplification and decay forces manifested in the operator's decomposition.</p>
   <h2>I. Construction of the Kernel \(K(x,y)\)</h2>
   <p>The operator \(H\) is a non-local integral operator on \(L^2(\mathcal{P})\), defined by
@@ -87,7 +87,7 @@
       \]
       where \(d^* t\) is the multiplicative Haar measure on \(\mathbb{R}_+^\times\), and the \(|t|^{-1/2}\) ensures balance on the critical line.</li>
   </ul>
-  <p>The full kernel \(K(x,y)\) ensures \(H\) is self-adjoint under the symmetry \(\mathcal{I}\), with the balance \(H_\text{amp} = H_\text{decay}\) on the critical line enforcing stability.</p>
+  <p>The kernel \(K(x,y)\) ensures \(H\) is self-adjoint under the symmetry \(\mathcal{I}\), with the balance \(H_\text{amp} = H_\text{decay}\) on the critical line; enforcing stability.</p>
   <h2>II. The Trace Formula via Adelic Path Integral</h2>
   <p>To evaluate the trace \(\operatorname{Tr}(H) = \int_{\mathcal{P}} K(x, x) \, d\mu(x)\), we use a non-perturbative adelic path integral over the full adele class space, extending to the non-compact factor \(\mathbb{R}_+^\times\). This "path integral" is the integral over closed "paths" (fixed points of the scaling action), corresponding to periodic orbits labeled by primes.</p>
   <div class="theorem">
@@ -100,17 +100,17 @@
   </div>
   <div class="proof">
     <h3>Proof</h3>
-    <p>The trace is computed by integrating the kernel on the diagonal, extended to the adele class space \(C_{\mathbb{Q}} = \mathbb{R}_+^\times \times \mathcal{P}\). The "path integral" representation is the sum over fixed points of the scaling action, which are the hyperplanes \(H_p = \{x \in A_{\mathbb{Q}} : x_p = 0\}\) for each prime \(p\).</p>
+    <p>Trace is computed by integrating kernel on the diagonal, extended to adele class space \(C_{\mathbb{Q}} = \mathbb{R}_+^\times \times \mathcal{P}\). The path integral representation is the sum over fixed points of the scaling act, which are the hyperplanes \(H_p = \{x \in A_{\mathbb{Q}} : x_p = 0\}\) for each prime \(p\).</p>
     <ol>
       <li><strong>Fixed Points and Orbits:</strong> The action \(\lambda \cdot x = \lambda x\) has fixed points where \((\lambda - 1)x = 0\). In the quotient \(A_{\mathbb{Q}} / \mathbb{Q}\), this corresponds to loci where the component at place \(p\) is zero, with isotropy group \(\mathbb{Q}_p^\times\).</li>
       <li><strong>Contribution per Orbit:</strong> For each prime \(p\), the contribution is the integral \(\int_{\mathbb{Q}_p^\times} g(u^{-1}) \frac{du}{|1 - u|}\), where \(du\) is the local Haar measure. Using the change of variables and the product formula, this yields \(\log p \cdot g(\log p)\).</li>
       <li><strong>Summation over Multiples:</strong> Extending to powers \(p^k\), the total geometric side is the sum over all prime powers, matching the explicit formula.</li>
-      <li><strong>Non-Perturbative Nature:</strong> The integral is exact, without semiclassical approximation, as the fixed points are rigorously computed using distributional traces and cutoffs for convergence.</li>
+      <li><strong>Non-Perturbative Nature:</strong> The integral is exact, without semiclassical approximation, as the fixed points are computed using distributional traces and cutoffs for convergence.</li>
     </ol>
-    <p>On the spectral side, \(\Tr(U(g)) = \sum_{\rho} g(\gamma)\), where \(\rho = 1/2 + i\gamma\) are the zeros, equating the two sides under RH as the stability condition.</p>
+    <p>Spectral side: \(\operatorname{Tr}(U(g)) = \sum_{\rho} g(\gamma)\), where \(\rho = 1/2 + i\gamma\)  *are* the zeros, equating the two sides under RH as the stability condition.</p>
   </div>
   <h2>Connection to Amplification and Decay</h2>
-  <p>The prime sum arises from \(H_\text{amp}\), the amplification force, while the balance with \(H_\text{decay}\) (from Fourier duality) ensures the spectral side aligns on the critical line; providing the "why" for the zeros' location: stability of the dynamical system.</p>
+  <p>The prime sum arises from \(H_\text{amp}\), amplification force, balanced by \(H_\text{decay}\) (from Fourier duality) so the spectral side aligns on the critical line. The reason for the zeros' location? the stability of the dynamical system. The zeros "look" random but they kind of have to be there <80)</p>
   <div class="footer">
     <p>For discussion over coffee (DE) and tea (UK) October 2025</p>
     <p>93E3 BEBC C164 D766</p>
