@@ -120,24 +120,24 @@
 </head>
 <body>
   <header>
-    <h1>Dynamical Stability Framework for the Riemann Hypothesis: Summary of Conjectural Proofs and Insights</h1>
-    <p class="subtitle">A Comprehensive Overview of the Novel Conjecture, Formal Proof Stages, and Forward-Looking Implications</p>
-    <p class="affiliation">Collaborative Research: Cambridge University and Technical University Munich</p>
+    <h1>Stability Framework for the Riemann Hypothesis</h1>
+    <p class="subtitle">Overview of the Novel Conjecture, Formal Proof Stages, and Future Implications for Research</p>
+    <p class="affiliation">Collaborative Research | Verification Code 93E3 BEBC C164 D766 |</p>
     <p class="date">October 26, 2025</p>
   </header>
 
 
   <section id="introduction">
-    <h2>Abstract and Overview</h2>
-    <p>This document provides a verbose summary of the conjectural proofs and findings developed in our recent explorations of a novel dynamical mechanism for the Riemann Hypothesis (RH). Drawing from historical breakthroughs in physics—such as Cardano's invention of complex numbers, Maxwell's unification of electromagnetism, and Dirac's relativistic quantum mechanics—we reframe RH not as a static property of the zeta function but as a necessary consequence of dynamical equilibrium in an underlying geometric system. The core idea posits that prime numbers and zeta zeros emerge from the interaction of two opposing forces: an amplification force driven by the multiplicative structure of primes and a decay force enforced by the functional equation's symmetry.</p>
-    <p>We have constructed this framework step by step, beginning with the definition of the Primal Manifold \(\mathcal{P}\) as an adelic quotient space, proceeding to the Hilbert space \(L^2(\mathcal{P})\), the non-local operator kernel \(K(x,y)\), the trace formula via adelic path integrals, and derivations of the explicit formula. The framework culminates in a renormalization group (RG) analysis that identifies the critical line \(\Re(s) = 1/2\) as a stable fixed point. While conjectural, this approach offers profound insights, unifying primes and zeros as dynamical phenomena and suggesting new predictive tools via RG extrapolation.</p>
-    <p>The document is structured as follows: Sections II-VI recapitulate the key conjectural proofs with corrected mathematical notation (ensuring standard black rendering via MathJax's \(\operatorname{}\) command). Section VII expands on potential efficiencies in asymptotic regimes, emphasizing how RG flows could enable predictions absent in brute-force methods. Finally, Section VIII proposes avenues for further research, including numerical simulations of RG flows and connections to quantum field theory (QFT), offering promising directions to the mathematical and physics communities.</p>
+    <h2>Overview</h2>
+    <p>The conjectural proofs and insights developed in recent explorations of a novel dynamical mechanism for the Riemann Hypothesis (RH) are below. Historical breakthroughs in physics—such as Cardano's invention (or discovery?) of complex numbers, Maxwell's unification of electromagnetism, and Dirac's relativistic quantum mechanics—reframing RH not as a static property of the zeta function but as a necessary consequence of dynamical equilibrium in an underlying geometric system looks plausible now. Basically the prime numbers and zeta zeros seem to emerge from the interaction of two opposing forces: an amplification force driven by the multiplicative structure of primes and a decay force enforced by the functional equation's symmetry.</p>
+    <p>Beginning with the definition of the Primal Manifold \(\mathcal{P}\) as an adelic quotient space, proceeding to the Hilbert space \(L^2(\mathcal{P})\), then the non-local operator kernel \(K(x,y)\), then the trace formula via adelic path integrals and derivations of the explicit formula. The framework culminates so far in a renormalization group (RG) analysis that identifies the critical line \(\Re(s) = 1/2\) as a stable fixed point. This approach so far offers <strong>profound</strong> insights, unifying primes and zeros as dynamical phenomena. It suggests new predictive tools via RG extrapolation which quantum computing can handle with ease.</p>
+    <p>Sections II-VI show the key conjectural proofs. Section VII expands on potential efficiencies in asymptotic regimes, especially how RG flows could enable predictions absent in brute-force methods. Finally, Section VIII proposes further research, including numerical simulations of RG flows and connections to quantum field theory (QFT), offering promising directions to both mathematical and physics communities.</p>
   </section>
 
 
   <section id="primal-manifold">
-    <h2>Stage 1: Defining the Primal Manifold \(\mathcal{P}\) and Hilbert Space \(L^2(\mathcal{P})\)</h2>
-    <p>The foundation of our dynamical system is the Primal Manifold \(\mathcal{P}\), a compact topological group constructed from adelic number theory. This space encodes all primes simultaneously, serving as the "universe" where amplification and decay forces compete. We rigorously define \(\mathcal{P}\) as the norm-1 subgroup of the idele class group \(C_{\mathbb{Q}} = J_{\mathbb{Q}} / \mathbb{Q}^\times\), where \(J_{\mathbb{Q}}\) is the idele group.</p>
+    <h2>Stage 1: Define the Primal Manifold \(\mathcal{P}\) and Hilbert Space \(L^2(\mathcal{P})\)</h2>
+    <p>The foundation of the dynamical system is the Primal Manifold \(\mathcal{P}\), a compact topological group constructed from adelic number theory. This space encodes all primes simultaneously, serving as the "universe" where amplification and decay forces compete. We rigorously define \(\mathcal{P}\) as the norm-1 subgroup of the idele class group \(C_{\mathbb{Q}} = J_{\mathbb{Q}} / \mathbb{Q}^\times\), where \(J_{\mathbb{Q}}\) is the idele group.</p>
     
     <div class="theorem">
       <h3>Formal Definition</h3>
@@ -168,7 +168,7 @@
 
   <section id="kernel-trace">
     <h2>Stage 3: Kernel Construction and Trace Formula via Adelic Path Integral</h2>
-    <p>We define the non-local operator \(H\) with kernel \(K(x,y) = K_{\text{amp}}(x,y) - K_{\text{decay}}(x,y)\), and evaluate the trace using path integrals.</p>
+    <p>Define the non-local operator \(H\) with kernel \(K(x,y) = K_{\text{amp}}(x,y) - K_{\text{decay}}(x,y)\), and evaluate the trace using path integrals.</p>
     
     <div class="theorem">
       <h3>Theorem: Trace Formula</h3>
@@ -177,14 +177,14 @@
     
     <div class="proof">
       <h3>Proof</h3>
-      <p>The trace decomposes over places, with finite places yielding prime sums and archimedean the Gamma terms. The \(p^{k/2}\) arises from symmetry transformation \(g(u) = e^{u/2} f(e^u)\).</p>
+      <p>The trace decomposes over places, with finite places yielding prime sums and archimedean, the Gamma terms. The \(p^{k/2}\) arises from symmetry transformation \(g(u) = e^{u/2} f(e^u)\).</p>
     </div>
   </section>
 
 
   <section id="explicit-formula">
     <h2>Stage 4: Deriving the Riemann-Weil Explicit Formula</h2>
-    <p>Equating spectral and geometric sides yields the explicit formula.</p>
+    <p>Equating spectral and geometric sides produces the explicit formula.</p>
     
     <div class="theorem">
       <h3>Theorem: Explicit Formula</h3>
@@ -209,7 +209,7 @@
     
     <div class="proof">
       <h3>Proof</h3>
-      <p>Linearization around \(\beta = 0\) shows negative eigenvalues, attracting flows to stability.</p>
+      <p>Linearization around \(\beta = 0\) shows negative eigenvalues, attracting the flows to stability.</p>
     </div>
   </section>
 
@@ -225,20 +225,20 @@
     
     <div class="proof">
       <h3>Proof (Conjectural)</h3>
-      <p>Off-line states are unstable under RG; only critical line balances forces.</p>
+      <p>Off-line states are unstable under RG; only the critical line balances forces.</p>
     </div>
   </section>
 
 
   <section id="insights">
     <h2>Key Insights and Expansions</h2>
-    <p>This framework unifies primes and zeros as dynamical phenomena emerging from force competition, akin to physical phase transitions. It excels in asymptotic regimes, where RG flows capture large-scale behaviors (e.g., high zeros or large primes) without exhaustive computation. Development is required to discretize the adelic space for simulations, but it enables RG extrapolation: estimate high zeros from low ones by evolving flows along scaling trajectories. This is absent in brute-force methods (e.g., FFT for zeros or sieves for primes), potentially aiding in disproving counterexamples (by flow divergence) or verifying RH conditionally (via RG bounds on beta function eigenvalues).</p>
+    <p>TL;DR Primes and zeros as dynamical phenomena emerging from force competition, akin to physical phase transitions. Asymptotic regimes; where RG flows capture large-scale behaviors (e.g., high zeros or large primes) without exhaustive computation. Exploration to discretize the adelic space for simulations is needed but, it enables RG extrapolation: estimating high zeros from low ones by evolving flows along scaling trajectories; absent in brute-force methods like FFT (my hero algorithm) for zeros or sieves for primes, potentially aiding in disproving counterexamples (by flow divergence) or verifying RH conditionally (via RG bounds on beta function eigenvalues).</p>
   </section>
 
 
   <section id="proposals">
     <h2>Proposals for Further Research</h2>
-    <p>We propose to esteemed colleagues promising physics-inspired tools for efficiency: simulate RG flows numerically (e.g., via lattice models on \(\hat{\mathbb{Z}}^\times\)) to predict zeros/primes. Avenues into QFT could model \(H\) as a field operator, with zeros as vacuum states. These directions require interdisciplinary collaboration for realization.</p>
+    <p>It looks like promising (physics) tools for efficiency can be discovered: simulating RG flows numerically (e.g., via lattice models on \(\hat{\mathbb{Z}}^\times\)) to predict zeros/primes. Journeys into QFT could model \(H\) as a field operator, with zeros as vacuum states. That sounds interesting.</p>
   </section>
 
 
