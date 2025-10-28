@@ -31,9 +31,9 @@
   
 [12.Conjectural Proof of RH via Dynamical Stability and RG Flow](https://xorbkpt.github.io/Riemann-Hypothesis/Conjectural_Proof_of_Riemann_Hypothesis_via_Dynamical_Stability_and_RG_Flow/)
 
-[13.Summary](https://xorbkpt.github.io/Riemann-Hypothesis/Summary_Conjectural_Proofs_and_Insights)
+[13.Summary so Far](https://xorbkpt.github.io/Riemann-Hypothesis/Summary_Conjectural_Proofs_and_Insights)
 
-[14.Future Work](https://xorbkpt.github.io/Riemann-Hypothesis/Connection_Between_Riemann_Hypothesis_and_QFT)
+[14.RH and QFT Future Work](https://xorbkpt.github.io/Riemann-Hypothesis/Connection_Between_Riemann_Hypothesis_and_QFT)
 
 
 work in progress..
