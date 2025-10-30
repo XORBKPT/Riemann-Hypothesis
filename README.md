@@ -1,7 +1,6 @@
 ---
 
-## Primes as topological defects - I gave up chasing the zeros...
-.....so this is just an inquiry into *"why they are there?"* <80)
+## Primes as topological defects - I gave up chasing the zeros...this? Just an inquiry into *"why they are there?"* <80)
 
 [Riemann Musings with Diagrams](https://xorbkpt.github.io/Riemann-Hypothesis/)
 
