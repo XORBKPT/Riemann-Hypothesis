@@ -1,6 +1,6 @@
 ---
 
-## I gave up chasing the zeros...this is just inquiry into *why* they exist <80)
+## I gave up chasing the zeros...this is just an inquiry into *why* they exist <80)
 
 [Riemann Musings with Diagrams](https://xorbkpt.github.io/Riemann-Hypothesis/)
 
